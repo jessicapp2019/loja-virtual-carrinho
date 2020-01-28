@@ -103,9 +103,13 @@
                 <div class="list-group">
                     <span class="list-group-item active"> Categorias</span>
                     
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
+                    {foreac from=$CATEGORIAS item=C}
+
+                    <a href="{$C.cate_link}" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> {$C.cate_nome}</a> 
                   
-                    
+                    {/foreach}
+
+                    <a href="{$PAG_PRODUTOS}" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Todos </a> 
          
                     
                 </div><!--fim da list group-->              
@@ -144,7 +148,7 @@
             <div class="row" id="rodape">
                 <center>
                     <h4>{$TITULO_SITE}</h4>
-                    <P>Todos os Direitos Reservados - Hugo Vasconcelos - Q-Cursos</P>
+                    <P>Todos os Direitos Reservados - Hugo Vasconcelos - Q-Cursos - Data Atual:{$DATA}</P>
                 </center>
             
             </div><!-- fim div rodape-->
